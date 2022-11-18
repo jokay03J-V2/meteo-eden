@@ -1,0 +1,194 @@
+:root {
+    --bg_main: #0a1f44;
+    --text_light: #fff;
+    --text_med: #53627c;
+    --text_dark: #1e2432;
+    --red: #ff1e42;
+    --darkred: #c3112d;
+    --orange: #ff8c00;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--bg_main);
+    font-family: "Roboto", sans-serif;
+    margin: 0px;
+    padding: 0px;
+}
+
+h1 {
+    color: white;
+    text-transform: capitalize;
+    font-size: 3em;
+    margin-left: 40px;
+    line-height: 1.5em;
+    margin-right: 40px;
+}
+
+#form-weather {
+    margin-left: 40px;
+    margin-right: 40px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+#search-weather {
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-family: "Roboto", sans-serif;
+    font-size: 1.5em;
+    margin-bottom: 25px;
+    border-bottom: 2px solid white;
+    padding-bottom: 5px;
+    width: 99%;
+}
+
+input::placeholder {
+    font-size: 1em;
+    color: white;
+}
+
+input:focus {
+    outline: none;
+}
+
+input::after {
+    position: absolute;
+    content: "";
+    height: auto;
+    width: 100%;
+    color: white;
+}
+
+#submit-button {
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--red);
+    color: white;
+    font-family: "Roboto", sans-serif;
+    text-transform: uppercase;
+    font-size: 1em;
+    padding: 10px;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+
+#input-error {
+    position: absolute;
+    top: 40px;
+    color: white;
+}
+
+#input-container {
+    position: relative;
+}
+
+#cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    height: auto;
+    width: calc(100% - 80px);
+    margin-left: 40px;
+    margin-right: 40px;
+    gap: 30px;
+}
+
+.card {
+    height: 300px;
+    width: 40%;
+    background-color: white;
+    border-radius: 15px;
+    position: relative;
+    padding-left: 20px;
+}
+
+.card-trash-button {
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    top: 3%;
+    left: calc(100% - 35px);
+}
+
+.card-trash-img {
+    height: 20px;
+    width: 20px;
+}
+
+.card-city {
+    font-weight: 500;
+    position: relative;
+    margin-top: 40px;
+    height: auto;
+    width: fit-content;
+    color: var(--text_med);
+    font-size: 1em;
+    font-family: "Roboto", sans-serif;
+}
+
+.card-city::after {
+    content: attr(data-pays);
+    position: absolute;
+    height: 20px;
+    width: 30px;
+    top: -5px;
+    left: 105%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    background-color: var(--orange);
+    color: white;
+    font-size: 10px;
+}
+
+.card-metric {
+    position: relative;
+    color: var(--text_dark);
+    font-size: 3em;
+    height: fit-content;
+    width: fit-content;
+    font-weight: bold;
+}
+
+.card-celcius {
+    position: absolute;
+    top: 0px;
+    left: 100%;
+    font-weight: 100;
+}
+
+.card-weather-img {
+    height: 100px;
+    width: 100px;
+}
+
+.card-description {
+    text-transform: uppercase;
+    color: var(--text_med);
+}
+
+@media screen and (min-width: 600px) {
+    .card {
+        width: 220px;
+    }
+    #form-weather {
+        flex-direction: row;
+    }
+    #submit-button {
+        margin-left: 20px;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    .card {
+            width: 250px;
+    }
+}
