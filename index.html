@@ -1,14 +1,40 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="site description">
-    <title>Hello</title>
-  </head>
-  <body>
-    <h1>Hello World!</h1>
-    <script src="./js/app.js" type="module"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="simple weather">
+  <title>simple weather map</title>
+</head>
+
+<body>
+  <h1>simple weather app</h1>
+  <form id="form-weather">
+    <div id="input-container">
+      <input type="text" placeholder="Search for a city" id="search-weather">
+      <div id="input-error"></div>
+    </div>
+    <button id="submit-button">submit</button>
+  </form>
+  <div id="cards-container">
+    <article class="card">
+      <button class="card-trash-button"><img src="./assets/poubelle.svg" class="card-trash-img"></button>
+      <h2 class="card-city" data-pays="FR">Saint-priest</h2>
+      <div class="card-metric">35<sup class="card-celcius">°C</sup></div>
+      <img class="card-weather-img" src="http://openweathermap.org/img/wn/01d@4x.png" alt="">
+      <p class="card-description">Clear sky</p>
+    </article>
+    <article class="card">
+      <button class="card-trash-button"><img src="./assets/poubelle.svg" class="card-trash-img"></button>
+      <h2 class="card-city" data-pays="FR">Saint-priest</h2>
+      <div class="card-metric">35<sup class="card-celcius">°C</sup></div>
+      <img class="card-weather-img" src="http://openweathermap.org/img/wn/01d@4x.png" alt="">
+      <p class="card-description">Clear sky</p>
+    </article>
+  </div>
+  <script src="./js/app.js" type="module"></script>
+</body>
+
 </html>
